@@ -1,0 +1,22 @@
+# Configuration file for TSLA Momentum Trading Model
+
+data:
+  ticker: "TSLA"
+  start_date: "2020-01-01"
+  end_date: null
+  interval: "1d"   # daily data, could be "1h", "15m", etc.
+
+strategy:
+  lookback: 20     # Donchian channel lookback period
+  rsi_period: 14   # RSI window size
+  rsi_upper: 70    # Overbought threshold
+  rsi_lower: 30    # Oversold threshold
+
+trading:
+  initial_cash: 100000
+  trading_fee: 0.001  # 0.1% per trade
+
+backtest:
+  benchmark: "TSLA"
+  plot: true
+  save_results: true
